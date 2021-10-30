@@ -1,0 +1,36 @@
+#include<stdio.h>
+int display(int);
+struct employee
+{
+int age,salary;
+long long int phn;
+char name[25];
+}
+emp[20];
+int main()
+{
+int i,n;
+printf("Enter the no of employees\n");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+	printf("enter the %d st employee name \n",i);
+	scanf("%s",emp[i].name);
+	printf("enter the %d st employee age\n",i);
+	scanf("%d",&emp[i].age);
+	printf("enter the %d st employee phone number\n",i);
+	scanf("%lld",&emp[i].phn);
+	printf("enter the %d st employee salary\n",i);
+	scanf("%d",&emp[i].salary);
+}
+printf("\nName\t\t Age\t\t phone number\t\t Salary\n");
+display(n);
+}
+display(int n)
+{
+	int i;
+for(i=1;i<=n;i++)
+{
+printf("%s \t\t %d \t\t %lld \t\t %d \n",emp[i].name,emp[i].age,emp[i].phn,emp[i].salary);
+}
+}
